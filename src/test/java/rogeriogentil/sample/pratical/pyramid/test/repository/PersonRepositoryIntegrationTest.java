@@ -37,8 +37,7 @@ class PersonRepositoryIntegrationTest {
         repository.save(person);
 
         Optional<Person> personFetched = repository.findByLastName(lastName);
-
-//        assertEquals(person, personFetched.get());
+        
         assertThat(personFetched.get(), is(equalTo(person)));
     }
 
